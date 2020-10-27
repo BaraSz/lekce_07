@@ -1,19 +1,3 @@
----
-tags: czechitas
-lang: cs
-slideOptions:
-    transition: none
-    theme: night
-    margin: 0.05
-    minScale: 0.1
-    maxScale: 5
-    width: 1900
-    height: 1080
-title: Lekce 07 | Tvořím web A–Z
----
-
-{%hackmd anYwyN--TziyASUWcqP-Gw %}
-
 # Tvořím web A–Z: lekce 7
 
 podzim 2020, Praha
