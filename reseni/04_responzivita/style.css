@@ -1,0 +1,58 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*, :after, :before { box-sizing: border-box; }
+
+body {
+	font-family: sans-serif;
+}
+
+
+.hlavicka {
+	padding: 1px;
+	background-color: #3498db;
+	color: white;
+	text-align: center;
+}
+
+a {
+	display: block;
+	padding: 5px 15px;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: white;
+	color: #3498db;
+}
+
+/* ---------------------------------------------------- */
+
+.logo {
+	padding: 5px 15px;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.menu {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+@media screen and (min-width: 560px) {
+
+	.hlavicka,
+	.menu {
+		display: flex;
+	}
+
+	.hlavicka {
+		justify-content: space-between;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}

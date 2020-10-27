@@ -1,0 +1,19 @@
+/* moderní box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background-color: hsla(200, 100%, 50%, 0.5);
+}

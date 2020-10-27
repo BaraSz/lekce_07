@@ -1,0 +1,81 @@
+/* moderní box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+/* ---------------------------------------------- */
+/* prostor pro hraní */
+
+
+/* 1. font-size, em × rem */
+html {
+    font-size: 10px
+}
+
+main,
+section,
+article {
+    font-size: 1.5em;
+}
+
+.em {
+    font-size: 1.5em;
+}
+
+.rem {
+    font-size: 1.5rem;
+}
+
+p code {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5em;
+}
+
+/* 2. width, % × vw */
+
+main,
+section,
+article {
+    width: 50vw;
+    background-color: hsla(185, 100%, 50%, 0.5);
+}
+
+article {
+    width: 50%;
+}
+
+/* ---------------------------------------------- */
+/* čistě pro úpravu, bez vztahu k probírané látce */
+
+h1,
+h2,
+h3 {
+    background-color: cornflowerblue;
+    margin: 0;
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 1em 0;
+    border-bottom: 1px dotted #666;
+    margin: 0;
+}
+
+p code {
+    border: 1px solid #666;
+    margin-left: 1rem;
+    color: #666;
+}
+
+small {
+    margin-left: auto;
+    font-size: 1.2rem;
+}

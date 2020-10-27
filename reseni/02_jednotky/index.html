@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS length units</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1><code>main</code></h1>
+        <p class="em">Sample text <code>1.5em</code></p>
+        <p class="rem">Sample text <code>1.5rem</code></p>
+        <section>
+            <h2><code>section</code></h2>
+            <p class="em">Sample text <code>1.5em</code></p>
+            <p class="rem">Sample text <code>1.5rem</code></p>
+            <article>
+                <h3><code>article</code></h3>
+                <p class="em">Sample text <code>1.5em</code></p>
+                <p class="rem">Sample text <code>1.5rem</code></p>
+            </article>
+        </section>
+    </main>
+    <script>
+        // rough'n'dirty, don't use anywhere without refactor
+        let paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach((p) => {
+            let pStyles = window.getComputedStyle(p, null);
+            let pFontSize = 0;
+            pFontSize = pStyles["fontSize"];
+            let small = document.createElement("small");
+            small.innerText = " " + pFontSize;
+            p.appendChild(small);
+        });
+    </script>
+</body>
+</html>
