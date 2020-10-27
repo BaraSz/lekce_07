@@ -1,0 +1,194 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 0.875rem;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+/*
+Poměrná velikost písma
+----------------------
+14px ~  0.875rem
+16px => 1rem
+18px ~  1.125rem
+22px ~  1.375rem
+28px ~  1.75rem
+36px ~  2.25rem
+48px ~  3rem
+*/
+
+.recepty {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.recept {
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: space-between;
+    min-height: 90px;
+    padding: 10px;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.recept-nazev {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 1.125rem;
+}
+
+.recept--hlavni .recept-nazev {
+    font-size: 1.75rem;
+}
+
+.recept-meta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.recept-rubrika {
+    font-weight: 400;
+}
+
+.recept--hlavni {
+    min-height: 200px;
+}
+
+.recept--salat {
+    background-image: url('images/salat.jpg');
+}
+
+.recept--chlebicek {
+    background-image: url('images/chlebicek.jpg');
+
+}
+
+.recept--tacos {
+    background-image: url('images/tacos.jpg');
+}
+
+.recept--cizrna {
+    background-image: url('images/cizrna.jpg');
+}
+
+.recept--burger {
+    background-image: url('images/burger.jpg');
+}
+
+@media screen and (min-width: 480px) {
+
+    .obsah {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sloupec {
+        flex: 1 1 50%;
+    }
+
+    .recept {
+        min-height: 150px;
+        border-right: 1px solid #fff;
+    }
+
+    .recept-nazev {
+        font-size: 1.375rem;
+    }
+
+    .recept--hlavni .recept-nazev {
+        font-size: 2.25rem;
+    }
+
+    .recept--cizrna,
+    .recept--burger,
+    .recept--hlavni {
+        border-right: none;
+    }
+
+    .recept--hlavni {
+        flex-basis: 100%;
+        min-height: 250px;
+        border-right: none;
+    }
+}
+
+@media screen and (min-width: 860px) {
+
+    .obsah {
+        flex-wrap: nowrap;
+    }
+
+    .recept--hlavni,
+    .sloupec {
+        flex-basis: calc(100% * 1/3);
+    }
+
+    .recept {
+        min-height: 200px;
+    }
+
+    .recept-nazev {
+        font-size: 1.75rem;
+    }
+
+    .recept--hlavni .recept-nazev {
+        font-size: 3rem;
+    }
+
+    .recept--hlavni {
+        min-height: 400px;
+        border-right: 1px solid #fff;
+    }
+}
